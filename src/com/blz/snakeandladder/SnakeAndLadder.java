@@ -9,9 +9,10 @@ public class SnakeAndLadder {
     public static void main(String[] args) {
             System.out.println("Welcome to Snake and Ladder Game");
             int currentPosition=0;
+            int dice=0;
 
         while(currentPosition<WINNING_POSITION) {
-
+            dice++;
             int diceNum = (int) (Math.random() * 10) % 6 + 1;
             int option = (int) (Math.random() * 10) % 3;
 
@@ -36,5 +37,6 @@ public class SnakeAndLadder {
             }
         }
         System.out.println("Player won at "+currentPosition+" position");
+        System.out.println("dice was rolled "+dice+" times");
     }
 }
