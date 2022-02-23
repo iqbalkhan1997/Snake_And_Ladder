@@ -27,6 +27,9 @@ public class SnakeAndLadder {
 
             } else if (option == IS_LADDER) {
                 currentPosition = currentPosition + diceNum;
+                if(currentPosition>WINNING_POSITION){
+                    currentPosition=currentPosition-diceNum;
+                }
                 System.out.println("Ladder option and player is at "+currentPosition);
             } else {
                 System.out.println("No Play option and player is at "+currentPosition);
